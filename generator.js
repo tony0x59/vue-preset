@@ -21,5 +21,20 @@ module.exports = (api, options, rootOptions) => {
         extends: ['plugin:compat/recommended']
     }
 
+    // add postcss-px-to-viewport
+    Object.assign(pkg.devDependencies, {
+        "postcss-px-to-viewport": "^1.1.0"
+    })
+    pkg.postcss = {
+        plugins: {
+            'postcss-px-to-viewport': {
+                viewportWidth: 750,
+                landscapeWidth: 1334,
+                unitPrecision: 3,
+                selectorBlackList: ['.use-pixel']
+            }
+        }
+    }
+
     api.extendPackage(pkg);
 }
