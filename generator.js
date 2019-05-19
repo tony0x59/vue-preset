@@ -9,7 +9,8 @@ module.exports = (api, options, rootOptions) => {
             "not OperaMini all",
             "not dead"
         ],
-        devDependencies: {}
+        devDependencies: {},
+        stylelint: {}
     }
 
     // add eslint compat
@@ -34,6 +35,14 @@ module.exports = (api, options, rootOptions) => {
                 selectorBlackList: ['.use-pixel']
             }
         }
+    }
+
+    // turnoff whitespace error
+    pkg.eslintConfig.rules = {
+        'no-trailing-spaces': 'off'
+    }
+    pkg.stylelint.rules = {
+        'no-eol-whitespace': null
     }
 
     api.extendPackage(pkg);
