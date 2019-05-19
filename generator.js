@@ -12,5 +12,14 @@ module.exports = (api, options, rootOptions) => {
         devDependencies: {}
     }
 
+    // add eslint compat
+    Object.assign(pkg.devDependencies, {
+        "eslint-plugin-compat": "^3.1.1"
+    })
+    pkg.eslintConfig = {
+        env: {browser: true},
+        extends: ['plugin:compat/recommended']
+    }
+
     api.extendPackage(pkg);
 }
