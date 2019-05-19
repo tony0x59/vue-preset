@@ -6,7 +6,7 @@
       "config": "standard",
       "lintOn": ["save", "commit"]
     },
-    "@ascendancyy/vue-cli-plugin-stylelint": {
+    "@tony0x59/vue-cli-plugin-stylelint": {
       "version": "^1.1.2",
       "config": "stylelint-config-standard",
       "lintStyleOn": ["save", "commit"],
