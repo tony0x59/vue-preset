@@ -1,0 +1,26 @@
+{
+  "useConfigFiles": true,
+  "plugins": {
+    "@vue/cli-plugin-babel": {},
+    "@vue/cli-plugin-eslint": {
+      "config": "standard",
+      "lintOn": ["save", "commit"]
+    },
+    "@ascendancyy/vue-cli-plugin-stylelint": {
+      "version": "^1.1.2",
+      "config": "stylelint-config-standard",
+      "lintStyleOn": ["save", "commit"],
+      "rules": {
+        "media-feature-name-no-vendor-prefix": true,
+        "at-rule-no-vendor-prefix": true,
+        "selector-no-vendor-prefix": true,
+        "property-no-vendor-prefix": true,
+        "value-no-vendor-prefix": true
+      }
+    }
+  },
+  "vuex": true,
+  "router": true,
+  "routerHistoryMode": false,
+  "cssPreprocessor": "dart-sass"
+}
